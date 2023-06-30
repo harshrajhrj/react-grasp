@@ -17,28 +17,78 @@
   color: #17d3e8;
   font-size: 1.5rem;
 }
-.App .Task {
+.App .AddTask form {
+  display: flex;
+  justify-content: space-evenly;
+}
+.App .AddTask form input {
+  width: 100%;
+  text-decoration: none;
+  border: 0.6px solid #c1c1c1;
+  border-radius: 0.375rem;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  color: #4c4c4c;
+  letter-spacing: 0.7px;
+}
+.App .AddTask form input::-moz-placeholder {
+  font-weight: 500;
+}
+.App .AddTask form input::placeholder {
+  font-weight: 500;
+}
+.App .AddTask form input:focus {
+  outline: none !important;
+  border: 1px solid #afc9f1;
+  box-shadow: 0 0 5px #afc9f1;
+}
+.App .AddTask form .btn-list {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  gap: 5px;
+}
+.App .AddTask form .btn-list .status {
+  padding: 0.375rem 0.45rem 0.375rem 0.45rem;
+  border-radius: 0.375rem;
+  letter-spacing: 0.6px;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 1.5rem;
+  color: #4c4c4c;
+  border: 1px solid #c1c1c1;
+}
+.App .AddTask form .btn-list .status:focus {
+  outline: none !important;
+  border-color: #4c4c4c;
+}
+.App .Task,
+.App .AddTask {
   border: 1px solid #17d3e8;
   border-radius: 0.375rem;
   padding: 10px;
   margin: 10px;
 }
-.App .Task .Header {
+.App .Task .Header,
+.App .AddTask .Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.App .Task .Header h1 {
+.App .Task .Header h1,
+.App .AddTask .Header h1 {
   color: #17d3e8;
 }
-.App .Task ul {
+.App .Task ul,
+.App .AddTask ul {
   display: flex;
   gap: 5px;
   flex-flow: column;
   margin: 0px;
   padding: 0px;
 }
-.App .Task ul li {
+.App .Task ul li,
+.App .AddTask ul li {
   display: flex;
   list-style: none;
   list-style-type: none;
@@ -48,19 +98,24 @@
   padding: 4.5px;
   border-radius: 0.375rem;
 }
-.App .Task ul li.completed {
+.App .Task ul li.completed,
+.App .AddTask ul li.completed {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgb(22, 152, 4);
 }
-.App .Task ul li.completed:hover {
+.App .Task ul li.completed:hover,
+.App .AddTask ul li.completed:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(38, 152, 4);
 }
-.App .Task ul li.incomplete {
+.App .Task ul li.incomplete,
+.App .AddTask ul li.incomplete {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgb(152, 21, 4);
 }
-.App .Task ul li.incomplete:hover {
+.App .Task ul li.incomplete:hover,
+.App .AddTask ul li.incomplete:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgb(152, 46, 4);
 }
-.App .Task ul li span {
+.App .Task ul li span,
+.App .AddTask ul li span {
   letter-spacing: 0.4px;
 }
 .App .btn {
@@ -79,6 +134,16 @@
 }
 .App .btn:hover {
   color: #0d6efd;
+  background: #fff;
+  cursor: pointer;
+}
+.App .reset {
+  background: rgb(152, 21, 4);
+  color: #fff;
+  border-color: rgb(152, 21, 4);
+}
+.App .reset:hover {
+  color: rgb(152, 21, 4);
   background: #fff;
   cursor: pointer;
 }/*# sourceMappingURL=li.css.map */

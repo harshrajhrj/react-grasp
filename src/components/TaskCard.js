@@ -5,7 +5,7 @@ function TaskCard({ task, handleDelete }) {
                 {task.id} - {task.name}
             </span>
 
-            <button className="btn" onClick={() => handleDelete(task.id)}>
+            <button className="btn reset" onClick={() => handleDelete(task.id)}>
                 Delete
             </button>
         </li>
