@@ -1,18 +1,12 @@
 import { useState } from "react";
 import TaskCard from "./TaskCard";
 
-function Tasks() {
-
-    const [tasks, setTasks] = useState([
-        { id: 5271, name: "ReactJS", completed: true },
-        { id: 5272, name: "NextJS", completed: false },
-        { id: 5273, name: "ElectronJS", completed: false }
-    ])
+function Tasks({ tasks, setTasks }) {
 
     const [show, setShow] = useState(true);
 
     function handleDelete(id) {
-        setTasks(tasks.filter(t => t.id != id));
+        setTasks(tasks.filter(t => t.id !== id));
     }
 
     return (

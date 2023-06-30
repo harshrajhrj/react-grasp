@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function AddTask() {
+function AddTask({ tasks, setTasks }) {
 
     const [newTask, setNewTask] = useState("");
     const [progress, setProgress] = useState(false);
@@ -25,7 +25,13 @@ function AddTask() {
             name: newTask,
             completed: Boolean(progress)
         }
-        console.log(task);
+        
+        /**
+         * This function adds an individual task to the the "tasks" array
+         * Working, new array is created with the individual "task" contained
+         * in the new array
+         */
+        setTasks([...tasks, task]);
         handleReset();
     }
 
