@@ -1,5 +1,6 @@
 import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+import "./components/Expense.css"
+import Expenses from './components/Expenses';
 
 function App() {
 
@@ -29,15 +30,14 @@ function App() {
       amount: 450
     },
   ]
+
   return (
-    <div className="App">
-      <h2>Let's get started</h2>
-      {
-        expense_items.map((item) => (
-          <ExpenseItem key={item.id} date={item.date} title={item.title} amount={item.amount} />
-        ))
-      }
-    </div>
+    <>
+      <div className="App">
+        <h2>Let's get started</h2>
+        <Expenses expenses={expense_items} />
+      </div>
+    </>
   );
 }
 

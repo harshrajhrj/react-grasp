@@ -1,0 +1,81 @@
+$color-1 : #0a7e82;
+$color-2: #0f6263;
+$color-text: #fff;
+$bx-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px #fff;
+$bx-shadow-hv: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px #fff;
+
+.App {
+    padding: 10px;
+    margin: 10px;
+
+    .expense-body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .expense-item {
+            display: flex;
+            align-items: center;
+            padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+            border: 1px solid $color-1;
+            border-radius: 0.375rem;
+            background: $color-1;
+            color: $color-text;
+            cursor: pointer;
+            transition: all .1s ease-in-out;
+
+            &:hover {
+                box-shadow: $bx-shadow-hv;
+                border-color: #fff;
+                background: #fff;
+                color: $color-2;
+                transform: scale(1.02);
+
+                .expense-date {
+                    background: $color-1;
+                    color: #fff;
+                }
+
+                .expense-item__price {
+                    background: $color-1;
+                    color: #fff;
+                }
+            }
+
+            .expense-date {
+                background: $color-2;
+                margin: 4px;
+                padding: 5px;
+                border-radius: 0.375rem;
+                font-weight: 500;
+                width: 100px;
+                text-align: center;
+            }
+
+            &__description {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                margin-left: 0.2rem;
+
+                .expense-item__price {
+                    display: flex;
+                    background: $color-2;
+                    border-radius: 0.375rem;
+                    font-weight: 600;
+                    letter-spacing: 0.7px;
+                    margin: 4px;
+                    padding: 4px;
+                    gap: 4px;
+                    width: 100px;
+                    flex-wrap: wrap;
+
+                    &::before {
+                        content: attr(data-set);
+                    }
+                }
+            }
+        }
+    }
+}
