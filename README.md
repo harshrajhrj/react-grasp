@@ -33,8 +33,8 @@ function App() {
 };
 ```
 * In the above code snippet, using props "path" and "element" we've rendered the following components
- + `<Home />` path `/` is the url to the element `<Home />`
- + `<Element />` path `about` is the url to the element `<About />`
+    + `<Home />` path `/` is the url to the element `<Home />`
+    + `<Element />` path `about` is the url to the element `<About />`
 ## What I've done?
 First we're gonna configure two routes namely-
 + `home` - Home page
