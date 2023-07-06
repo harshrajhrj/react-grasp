@@ -15,7 +15,7 @@ root.render(
   </React.StrictMode>
 );
 ```
-* In *app.js*, we've imported `Routes` and `Route` from `react-router-dom` to use all the indivdual route.
+* In *App.js*, we've imported `Routes` and `Route` from `react-router-dom` to use all the indivdual route.
 * In `App()` function, we can wrap all individual route inside `<Routes>` component.
 * Syntax for import and Route
 ```javascript
@@ -39,5 +39,21 @@ function App() {
 First we're gonna configure two routes namely-
 + `home` - Home page
 + `about` - About page
+## Navigating to the components using Links
+In this step, we've created a file *Navbar.js* and inside the file we've imported `Links` component of 'rrd' to navigate between the URLs.
+* Syntax for import and basic `Navbar()` function
+```javascript
+import { Link } from "react-router-dom";
 
-`Server running at port 3000`
+export const Navbar = () => {
+    return (
+        <div>
+            <nav>
+                <Link to='/'>Home</Link>
+                <Link to='/about'>About</Link>
+            </nav>
+        </div>
+    );
+}
+```
+* After importing the *Navbar.js*, we've wrapped the `Navbar` component inside the the `App()` function and we've also added basic styling to the *Navbar* component.
