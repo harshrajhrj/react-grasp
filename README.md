@@ -56,4 +56,4 @@ export const Navbar = () => {
     );
 }
 ```
-* After importing the *Navbar.js*, we've wrapped the `Navbar` component inside the the `App()` function and we've also added basic styling to the *Navbar* component[^[change](https://github.com/harshrajhrj/react-grasp/blob/f4c5273806766a9cbc212600498895b90b7a1e18/src/App.js#L10)].
+* After importing the *Navbar.js*, we've wrapped the `Navbar` component inside the the `App()` function and we've also added basic styling to the *Navbar* component<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/f4c5273806766a9cbc212600498895b90b7a1e18/src/App.js#L10)</sup>.
