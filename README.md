@@ -5,13 +5,22 @@ In this [directory](https://github.com/harshrajhrj/react-grasp/tree/react-router
 * Syntax for import
 ```javascript
 import {BrowserRouter} from 'react-router-dom';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
 ```
 * In *app.js*, we've imported `Routes` and `Route` from `react-router-dom` to use all the indivdual route.
 * Syntax for import
 ```javascript
 import { Routes, Route } from 'react-router-dom';
 ```
-* In `app()` function, we can wrap all individual route inside `<Routes>` component.
+* In `App()` function, we can wrap all individual route inside `<Routes>` component.
 ```javascript
 function App() {
     return (
