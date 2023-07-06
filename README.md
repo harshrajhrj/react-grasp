@@ -16,11 +16,8 @@ root.render(
 );
 ```
 * In *app.js*, we've imported `Routes` and `Route` from `react-router-dom` to use all the indivdual route.
-* Syntax for import and Route
-```javascript
-import { Routes, Route } from 'react-router-dom';
-```
 * In `App()` function, we can wrap all individual route inside `<Routes>` component.
+* Syntax for import and Route
 ```javascript
 import { Routes, Route } from 'react-router-dom';
 
@@ -36,8 +33,8 @@ function App() {
 };
 ```
 * In the above code snippet, using props "path" and "element" we've rendered the following components
- * `<Home />` path `/` is the url to the element `<Home />`
- * `<Element />` path `about` is the url to the element `<About />`
+ + `<Home />` path `/` is the url to the element `<Home />`
+ + `<Element />` path `about` is the url to the element `<About />`
 ## What I've done?
 First we're gonna configure two routes namely-
 + `home` - Home page
