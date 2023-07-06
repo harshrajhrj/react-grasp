@@ -8,10 +8,8 @@
   gap: 10px;
   padding: 5px;
   font-size: 1.3rem;
-  background: #9fcfd6;
+  background: aliceblue;
 }
 .App nav a {
-  font-weight: 600;
-  text-decoration: none;
-  color: rgb(14, 70, 82);
+  letter-spacing: 0.7px;
 }/*# sourceMappingURL=Navbar.css.map */

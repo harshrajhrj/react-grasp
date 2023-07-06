@@ -9,12 +9,17 @@
         gap: 10px;
         padding: 5px;
         font-size: 1.3rem;
-        background: #9fcfd6;
+        background: aliceblue;
 
         a {
-            font-weight: 600;
-            text-decoration: none;
-            color: rgb(14, 70, 82);
+            // font-weight: 400;
+            letter-spacing: .7px;
+            // color: rgb(59, 14, 82);
+
+            // &.active {
+            //     color: rgb(137, 13, 253);
+            //     font-weight: 800;
+            // }
         }
     }
 }

@@ -58,4 +58,8 @@ export const Navbar = () => {
 ```
 * After importing the *Navbar.js*, we've wrapped the `Navbar` component inside the the `App()` function and we've also added basic styling to the *Navbar* component<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/f4c5273806766a9cbc212600498895b90b7a1e18/src/App.js#L10)</sup>.
 ## Navigating to the components using NavLink
-`NavLink` works same as `Link` component, additionally it appends `active` class to the current active link(`<a>` element) which helps the user to know which link they're in currently. This is important with respect to user's point of view<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/ccd1be5485cfff03dc4f0f882167ac765378369a/src/components/Navbar.js#L7)</sup>.
+`NavLink` works same as `Link` component, additionally it appends `active` class to the current active link( `<a>` element ) which helps the user to know which link they're in currently. This is important with respect to user's point of view<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/ccd1be5485cfff03dc4f0f882167ac765378369a/src/components/Navbar.js#L7)</sup>.
+------
+We can style the `.active` class in two ways-
++ Using css
++ Using `style` prop in the `NavLink` component. While the link is active, then the 'rrd' adds `isActive : true` property to the component. And we can use this property to set the styles within the `Navbar()` component function using JavaScript<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/f706fb175b01978fd742fe987e229b81f1db1c30/src/components/Navbar.js#L4)</sup>.
