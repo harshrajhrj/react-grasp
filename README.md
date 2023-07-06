@@ -62,3 +62,7 @@ export const Navbar = () => {
 * We can style the `.active` class in two ways-
     + Using css
     + Using `style` prop in the `NavLink` component. While the link is active, then the 'rrd' adds `isActive : true` property to the component. And we can use this property to set the styles within the `Navbar()` component function using JavaScript<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/f706fb175b01978fd742fe987e229b81f1db1c30/src/components/Navbar.js#L4)</sup>.
+## Navigating to the components using useNavigate
+* We can navigate to the components based on the events like form submission, onClick, etc using `useNavigate` component.
+* An event can be like `Place an order` button click and the user will be navigated to `order summary` page<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/80935efbf514a060ee2cb48362aa80e4ffb21a8e/src/components/Home.js#L8)</sup>.
+* We can also use `{replace : true}` property to remove the current page from stack after navigating to the `order-summary`. Changes reflect when we try to navigate back to `home`( home ) page. Then, there will be no `Home` page present as it was removed. 

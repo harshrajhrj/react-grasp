@@ -1,0 +1,15 @@
+.App {
+    .btn {
+        border-radius: 0.375rem;
+        padding: 0.375rem 0.75rem;
+        background-color: aliceblue;
+        border: 1px solid aliceblue;
+        font-weight: 600;
+        letter-spacing: .7px;
+        cursor: pointer;
+
+        &:hover {
+            background: rgb(228, 243, 255);
+        }
+    }
+}
