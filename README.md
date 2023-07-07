@@ -66,4 +66,4 @@ export const Navbar = () => {
 * We can navigate to the components based on the events like form submission, onClick, etc using `useNavigate` component.
 * An event can be like `Place an order` button click and the user will be navigated to `order summary` page<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/839be61bc54e343d2ff6966749a6c6083d4d9b82/src/components/Home.js#L8)</sup>.
 * We can also use `{replace : true}` property to remove the current page from stack after navigating to the `order-summary`. Changes reflect when we try to navigate back to `home`( home ) page. Then, there will be no `Home` page present as it was removed<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/839be61bc54e343d2ff6966749a6c6083d4d9b82/src/components/OrderSummary.js#L8)</sup>.
-* In `OrderSummary` component, we've used `navigate(-1)` which means there is a change in the history stack. It simply go back, one page behind. 
+* In `OrderSummary` component, we've used `navigate(-1)` which means there is a change in the history stack. It simply go back, one page behind.
