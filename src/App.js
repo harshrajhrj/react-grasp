@@ -1,41 +1,24 @@
 import './App.css';
-import "./components/Expense.css"
-import Expenses from './components/Expenses';
+import './components/Navbar.css'
+import "./components/Home.css";
+import { Routes, Route } from 'react-router-dom';
+import { Home } from './components/Home';
+import { About } from './components/About';
+import { Navbar } from './components/Navbar';
+import { OrderSummary } from './components/OrderSummary';
+import { NoMatch } from './components/NoMatch';
 
 function App() {
-
-  var expense_items = [
-    {
-      id: 1,
-      date: new Date(2020, 8, 14),
-      title: 'Toilet paper',
-      amount: 94.12
-    },
-    {
-      id: 2,
-      date: new Date(2021, 3, 12),
-      title: 'New TV',
-      amount: 799.49
-    },
-    {
-      id: 3,
-      date: new Date(2021, 3, 28),
-      title: 'Car insurance',
-      amount: 294.67
-    },
-    {
-      id: 4,
-      date: new Date(2021, 6, 12),
-      title: 'New desk(wooden)',
-      amount: 450
-    },
-  ]
-
   return (
     <>
-      <div className="App">
-        <h2>Let's get started</h2>
-        <Expenses expenses={expense_items} />
+      <div className='App'>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='order-summary' element={<OrderSummary />} />
+          <Route path='*' element={<NoMatch />}></Route>
+        </Routes>
       </div>
     </>
   );

@@ -1,8 +1,7 @@
-html {
-  background: #006063;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .App {
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
@@ -36,6 +35,7 @@ html {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

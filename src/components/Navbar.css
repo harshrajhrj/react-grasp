@@ -1,0 +1,11 @@
+.App nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 5px;
+  font-size: 1.3rem;
+  background: aliceblue;
+}
+.App nav a {
+  letter-spacing: 0.7px;
+}/*# sourceMappingURL=Navbar.css.map */
