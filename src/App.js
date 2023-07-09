@@ -23,7 +23,6 @@ function App() {
           <Route path='products' element={<Products />}>
             <Route path='category' element={<Category />} />
             <Route path='new' element={<NewProduct />} />
-            <Route />
           </Route>
           <Route path='*' element={<NoMatch />}></Route>
         </Routes>

@@ -75,3 +75,14 @@ export const Navbar = () => {
     3. In `path` prop of `<Route>`, `*` means if no location/path matches, then the "NoMatch" path will be executed and therefore its component<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/935ee74416446460035f79d09fd70a56ff044911/src/App.js#L20)</sup>.
 ## Nested routes
 * Nested routes can be used to change a particular component keeping other components common in the current page itself. It is very powerful when the situation comes for handling many components for a single parent route.
+* I'm using a new page "products" which further has two components "category" and "new products".
+    * I created a `NavLink` to the `products` page in the `NavBar` component<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/7fa92fdea25aa3a4a5e3a9d67dbd06f266f2aff8/src/components/Navbar.js#L15)</sup>.
+    * Create a `Products.js` file<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/7fa92fdea25aa3a4a5e3a9d67dbd06f266f2aff8/src/components/Products.js#L3)</sup>.
+    * In the `products` component, wrap all the child components individually inside `Link` component of 'rrd'<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/7fa92fdea25aa3a4a5e3a9d67dbd06f266f2aff8/src/components/Products.js#L10-L11)</sup>.
+    * Create `Category.js` and `NewProduct.js` file.
+    * Import the following components in `App.js`:
+        * products
+        * category
+        * newproduct
+    * Add the nested routing<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/7fa92fdea25aa3a4a5e3a9d67dbd06f266f2aff8/src/App.js#L23)</sup>.
+    * In `Products.js`, import `Outlet` component and add the `<Outlet />` component in the last of `Products` component<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/7fa92fdea25aa3a4a5e3a9d67dbd06f266f2aff8/src/components/Products.js#L13)</sup>.
