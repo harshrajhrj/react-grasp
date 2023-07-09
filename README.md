@@ -73,3 +73,5 @@ export const Navbar = () => {
     1. Create a file `NoMatch.js` in `components` folder<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/935ee74416446460035f79d09fd70a56ff044911/src/components/About.js#L1)</sup>.
     2. Import the `NoMatch` component in "App.js" and wrap the component under `<Route>` component.
     3. In `path` prop of `<Route>`, `*` means if no location/path matches, then the "NoMatch" path will be executed and therefore its component<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/935ee74416446460035f79d09fd70a56ff044911/src/App.js#L20)</sup>.
+## Nested routes
+* Nested routes can be used to change a particular component keeping other components common in the current page itself. It is very powerful when the situation comes for handling many components for a single parent route.
