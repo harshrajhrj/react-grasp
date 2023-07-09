@@ -86,3 +86,6 @@ export const Navbar = () => {
         * newproduct
     * Add the nested routing<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/7fa92fdea25aa3a4a5e3a9d67dbd06f266f2aff8/src/App.js#L23)</sup>.
     * In `Products.js`, import `Outlet` component and add the `<Outlet />` component in the last of `Products` component<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/7fa92fdea25aa3a4a5e3a9d67dbd06f266f2aff8/src/components/Products.js#L13)</sup>.
+## Index route
+* We can use index route(also a type of nested route) when we want any child component to be displayed with the parent component. Other child components can be displayed using the `Link` feature.
+* In `App.js`, we've a index route which renders the child component `category` too with the `products` component which wasn't in earlier case. So, when we go to "newproduct", the child component changes to `NewProduct` which should work as earlier and so with "category" component<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/944b851584ba129b718ac24556b830b3da69636e/src/App.js#L24)</sup>.

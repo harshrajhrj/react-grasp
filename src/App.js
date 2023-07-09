@@ -21,6 +21,7 @@ function App() {
           <Route path='about' element={<About />} />
           <Route path='order-summary' element={<OrderSummary />} />
           <Route path='products' element={<Products />}>
+            <Route index element={<Category />} />
             <Route path='category' element={<Category />} />
             <Route path='new' element={<NewProduct />} />
           </Route>
