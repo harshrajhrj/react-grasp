@@ -17,32 +17,40 @@ import { OrderDetails } from './components/OrderDetails';
 import { Orders } from './components/Orders';
 import { OrderTaker } from './components/OrderTaker';
 import React from 'react';
+import { AuthProvider } from './components/Auth';
+import { Login } from './components/Login';
+import { RequireAuth } from './components/RequireAuth';
+import { Profile } from './components/Profile';
 const LazyAbout = React.lazy(() => import('./components/About'));
 
 function App() {
   return (
     <>
-      <div className='App'>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='about' element={<React.Suspense fallback='Loading...'><LazyAbout /></React.Suspense>} />
-          <Route path='order-summary' element={<OrderSummary />} />
-          <Route path='products' element={<Products />}>
-            <Route index element={<Category />} />
-            <Route path='category' element={<Category />} />
-            <Route path='new' element={<NewProduct />} />
-          </Route>
-          <Route path='users' element={<Users />} />
-          <Route path='users/:userid' element={<UserDetails />} />
-          <Route path='users/admin' element={<AdminUser />} />
-          <Route path='orders' element={<Orders />}>
-            <Route path=':orderid' element={<OrderDetails />} />
-            <Route path='taker' element={<OrderTaker />} />
-          </Route>
-          <Route path='*' element={<NoMatch />}></Route>
-        </Routes>
-      </div>
+      <AuthProvider>
+        <div className='App'>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/profile' element={<RequireAuth><Profile /></RequireAuth>} />
+            <Route path='about' element={<React.Suspense fallback='Loading...'><LazyAbout /></React.Suspense>} />
+            <Route path='order-summary' element={<OrderSummary />} />
+            <Route path='products' element={<Products />}>
+              <Route index element={<Category />} />
+              <Route path='category' element={<Category />} />
+              <Route path='new' element={<NewProduct />} />
+            </Route>
+            <Route path='users' element={<Users />} />
+            <Route path='users/:userid' element={<UserDetails />} />
+            <Route path='users/admin' element={<AdminUser />} />
+            <Route path='orders' element={<Orders />}>
+              <Route path=':orderid' element={<OrderDetails />} />
+              <Route path='taker' element={<OrderTaker />} />
+            </Route>
+            <Route path='*' element={<NoMatch />}></Route>
+          </Routes>
+        </div>
+      </AuthProvider>
     </>
   );
 }
