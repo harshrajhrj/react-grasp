@@ -104,3 +104,9 @@ export const Navbar = () => {
 * In `Products.js`, if we add `/` before the path in `<Link>` then it becomes absolute link. Thus, it'll open as `/category` and not as `/products/category`.
 * So, to follow relative paths and render the closest child to the parent we shouldn't add `/` before the path in `<Link>` so what is called as Relative link<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/ac754804f93eafdf96b0f1b5b1a2d354ee40ff0f/src/components/Products.js#L10-L11)</sup>.
 ## LazyLoad
+* I've reduced the amount of code to be loaded during initial load to make the loading faster as required.
+* In `About.js`, I've used `default` export<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/8f25fb8f2bdff9c82edd7a7525ac9146f182b901/src/components/About.js#L205)</sup>.
+* In `App.js`, I've used lazyload, react suspense and dynamic imports to frame our lazyloading.
+    * `React.lazy` function is used to import our `About.js` dynamically and lazyloading it<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/8f25fb8f2bdff9c82edd7a7525ac9146f182b901/src/App.js#L20)</sup>.
+    * So, we remove `<About />` component from the route and instead we put <LazyAbout /> wrapped inside `<React.Suspense>` with a fallback prop containing the `Loading...` text<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/8f25fb8f2bdff9c82edd7a7525ac9146f182b901/src/App.js#L29)</sup>.
+    * Thus, our final step is complete for lazyloading.
