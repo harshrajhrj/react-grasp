@@ -95,3 +95,8 @@ export const Navbar = () => {
 * If one path is fixed and the second path is dynamic, then react will always try to find the best specific route that matches exactly<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/fd141bb7970e27d437200fb7c2495b5a745775b1/src/App.js#L35-L36)</sup>.
 ## useParams()
 * I've displayed individual order detail corresponding to its `id` using `useParams()` hook from 'rrd'. I've destructured the params object to store the `orderid` and displayed order id accordingly<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/d12f759747bac47dbcbd0f6b3880a0405c5a790e/src/components/OrderDetails.js#L4)</sup>.
+## useSearchParams
+* I've displayed order details in two ways using `useSearchParams` hook from 'rrd':
+    * `active` orders
+    * `inactive` orders
+* `useSearchParams` is similar to `useState` hook but instead of returning `[variable, function]`, it returns `[paramObject, function]`<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/d181ab8f0bfb113dcf725d5ff230b541cfd80868/src/components/Orders.js#L3)</sup>.
