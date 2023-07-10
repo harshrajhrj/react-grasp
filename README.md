@@ -103,3 +103,4 @@ export const Navbar = () => {
 ## Relative links
 * In `Products.js`, if we add `/` before the path in `<Link>` then it becomes absolute link. Thus, it'll open as `/category` and not as `/products/category`.
 * So, to follow relative paths and render the closest child to the parent we shouldn't add `/` before the path in `<Link>` so what is called as Relative link<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/ac754804f93eafdf96b0f1b5b1a2d354ee40ff0f/src/components/Products.js#L10-L11)</sup>.
+## LazyLoad
