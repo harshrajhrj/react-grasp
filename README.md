@@ -89,3 +89,4 @@ export const Navbar = () => {
 ## Index route
 * We can use index route(also a type of nested route) when we want any child component to be displayed with the parent component. Other child components can be displayed using the `Link` feature.
 * In `App.js`, we've a index route which renders the child component `category` too with the `products` component which wasn't in earlier case. So, when we go to "newproduct", the child component changes to `NewProduct` which should work as earlier and so with "category" component<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/37d1f56b596afc15d46ae1d18d9c14b7da0fba6a/src/App.js#L24)</sup>.
+## Dynamic and nested route

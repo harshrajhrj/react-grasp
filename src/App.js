@@ -10,6 +10,9 @@ import { NoMatch } from './components/NoMatch';
 import { Products } from './components/Products';
 import { Category } from './components/Category';
 import { NewProduct } from './components/NewProduct';
+import { Users } from './components/Users';
+import { UserDetails } from './components/UserDetails';
+import { AdminUser } from './components/AdminUser';
 
 function App() {
   return (
@@ -24,6 +27,13 @@ function App() {
             <Route index element={<Category />} />
             <Route path='category' element={<Category />} />
             <Route path='new' element={<NewProduct />} />
+          </Route>
+          {/* <Route path='users' element={<Users />} />
+          <Route path='users/:userid' element={<UserDetails />} />
+          <Route path='users/admin' element={<AdminUser />} /> */}
+          <Route path='users' element={<Users />}>
+            <Route path=':userid' element={<UserDetails />} />
+            <Route path='admin' element={<AdminUser />} />
           </Route>
           <Route path='*' element={<NoMatch />}></Route>
         </Routes>
