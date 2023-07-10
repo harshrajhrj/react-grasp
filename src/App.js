@@ -13,6 +13,9 @@ import { NewProduct } from './components/NewProduct';
 import { Users } from './components/Users';
 import { UserDetails } from './components/UserDetails';
 import { AdminUser } from './components/AdminUser';
+import { OrderDetails } from './components/OrderDetails';
+import { Orders } from './components/Orders';
+import { OrderTaker } from './components/OrderTaker';
 
 function App() {
   return (
@@ -28,12 +31,12 @@ function App() {
             <Route path='category' element={<Category />} />
             <Route path='new' element={<NewProduct />} />
           </Route>
-          {/* <Route path='users' element={<Users />} />
+          <Route path='users' element={<Users />} />
           <Route path='users/:userid' element={<UserDetails />} />
-          <Route path='users/admin' element={<AdminUser />} /> */}
-          <Route path='users' element={<Users />}>
-            <Route path=':userid' element={<UserDetails />} />
-            <Route path='admin' element={<AdminUser />} />
+          <Route path='users/admin' element={<AdminUser />} />
+          <Route path='orders' element={<Orders />}>
+            <Route path=':orderid' element={<OrderDetails />} />
+            <Route path='taker' element={<OrderTaker />} />
           </Route>
           <Route path='*' element={<NoMatch />}></Route>
         </Routes>
