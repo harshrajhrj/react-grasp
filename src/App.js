@@ -1,4 +1,6 @@
 import './App.css';
+import { createContext } from 'react';
+import { ComponentA } from './components/useContext/ComponentA';
 import { RunOnce } from './components/useEffect/RunOnce';
 import { UseEffectConditionalRun } from './components/useEffect/UseEffectConditionalRun';
 import { UseEffectFetch } from './components/useEffect/UseEffectFetch';
@@ -8,6 +10,13 @@ import { UseEffectUpdateTitle } from './components/useEffect/UseEffectUpdateTitl
 import { UseStateWithArray } from './components/useState/UseStateWithArray';
 import { UseStateWithObject } from './components/useState/UseStateWithObject';
 import { UseStateWithPreviousState } from './components/useState/UseStateWithPreviousState';
+
+/**
+ * The `.createContext()` helps in maintaining context(or values) at any level of
+ * component hierarchy tree.
+ */
+export const UserContext = createContext();
+export const TechContext = createContext();
 
 function App() {
   return (
@@ -21,7 +30,12 @@ function App() {
         {/* <RunOnce /> */}
         {/* <UseEffectInterval /> */}
         {/* <UseEffectFetch /> */}
-        <UseEffectFetchIndividual />
+        {/* <UseEffectFetchIndividual /> */}
+        <UserContext.Provider value={'Harsh Raj'}>
+          <TechContext.Provider value={'React JS'}>
+            <ComponentA />
+          </TechContext.Provider>
+        </UserContext.Provider>
       </div>
     </>
   );
