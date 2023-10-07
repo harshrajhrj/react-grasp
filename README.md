@@ -110,3 +110,4 @@ export const Navbar = () => {
     * `React.lazy` function is used to import our `About.js` dynamically and lazyloading it<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/8f25fb8f2bdff9c82edd7a7525ac9146f182b901/src/App.js#L20)</sup>.
     * So, we remove `<About />` component from the route and instead we put <LazyAbout /> wrapped inside `<React.Suspense>` with a fallback prop containing the `Loading...` text<sup>[change](https://github.com/harshrajhrj/react-grasp/blob/8f25fb8f2bdff9c82edd7a7525ac9146f182b901/src/App.js#L29)</sup>.
     * Thus, our final step is complete for lazyloading.
+## Authentication and Route protection
