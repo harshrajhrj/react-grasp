@@ -1,7 +1,7 @@
 import './App.css';
-import { UseStateWithArray } from './components/UseStateWithArray';
-import { UseStateWithObject } from './components/UseStateWithObject';
-import { UseStateWithPreviousState } from './components/UseStateWithPreviousState';
+import { UseStateWithArray } from './components/useState/UseStateWithArray';
+import { UseStateWithObject } from './components/useState/UseStateWithObject';
+import { UseStateWithPreviousState } from './components/useState/UseStateWithPreviousState';
 
 function App() {
   return (
