@@ -10,6 +10,7 @@ import { UseEffectUpdateTitle } from './components/useEffect/UseEffectUpdateTitl
 import { UseStateWithArray } from './components/useState/UseStateWithArray';
 import { UseStateWithObject } from './components/useState/UseStateWithObject';
 import { UseStateWithPreviousState } from './components/useState/UseStateWithPreviousState';
+import { UseReducerCounter } from './components/useReducer/UseReducerCounter';
 
 /**
  * The `.createContext()` helps in maintaining context(or values) at any level of
@@ -31,11 +32,12 @@ function App() {
         {/* <UseEffectInterval /> */}
         {/* <UseEffectFetch /> */}
         {/* <UseEffectFetchIndividual /> */}
-        <UserContext.Provider value={'Harsh Raj'}>
+        {/* <UserContext.Provider value={'Harsh Raj'}>
           <TechContext.Provider value={'React JS'}>
             <ComponentA />
           </TechContext.Provider>
-        </UserContext.Provider>
+        </UserContext.Provider> */}
+        <UseReducerCounter />
       </div>
     </>
   );
