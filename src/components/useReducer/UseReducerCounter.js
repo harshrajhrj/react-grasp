@@ -55,6 +55,7 @@ export const UseReducerCounter = () => {
             <button onClick={() => dispatch('increment')}>Increment</button>
             <button onClick={() => dispatch('decrement')}>Decrement</button>
             <button onClick={() => dispatch('reset')}>Reset</button>
+            
         </div>
     )
 }
