@@ -10,7 +10,9 @@ import { UseEffectUpdateTitle } from './components/useEffect/UseEffectUpdateTitl
 import { UseStateWithArray } from './components/useState/UseStateWithArray';
 import { UseStateWithObject } from './components/useState/UseStateWithObject';
 import { UseStateWithPreviousState } from './components/useState/UseStateWithPreviousState';
-import { UseReducerCounter } from './components/useReducer/UseReducerCounter';
+import { UseReducerSimpleCounter } from './components/useReducer/UseReducerSimpleCounter';
+import { UseReducerComplexCounter } from './components/useReducer/UseReducerComplexCounter';
+import { MultipleUseReducers } from './components/useReducer/MultipleUseReducers';
 
 /**
  * The `.createContext()` helps in maintaining context(or values) at any level of
@@ -37,7 +39,9 @@ function App() {
             <ComponentA />
           </TechContext.Provider>
         </UserContext.Provider> */}
-        <UseReducerCounter />
+        {/* <UseReducerSimpleCounter /> */}
+        {/* <UseReducerComplexCounter /> */}
+        <MultipleUseReducers />
       </div>
     </>
   );
