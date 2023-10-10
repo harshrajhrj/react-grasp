@@ -1,6 +1,5 @@
 import './App.css';
-import { createContext } from 'react';
-import { ComponentA } from './components/useContext/ComponentA';
+import { createContext, useReducer } from 'react';
 import { RunOnce } from './components/useEffect/RunOnce';
 import { UseEffectConditionalRun } from './components/useEffect/UseEffectConditionalRun';
 import { UseEffectFetch } from './components/useEffect/UseEffectFetch';
@@ -13,6 +12,9 @@ import { UseStateWithPreviousState } from './components/useState/UseStateWithPre
 import { UseReducerSimpleCounter } from './components/useReducer/UseReducerSimpleCounter';
 import { UseReducerComplexCounter } from './components/useReducer/UseReducerComplexCounter';
 import { MultipleUseReducers } from './components/useReducer/MultipleUseReducers';
+import { ComponentA } from './components/useReducer-with-useContext/ComponentA';
+import { ComponentB } from './components/useReducer-with-useContext/ComponentB';
+import { ComponentC } from './components/useReducer-with-useContext/ComponentC';
 
 /**
  * The `.createContext()` helps in maintaining context(or values) at any level of
@@ -20,8 +22,24 @@ import { MultipleUseReducers } from './components/useReducer/MultipleUseReducers
  */
 export const UserContext = createContext();
 export const TechContext = createContext();
+export const CountContext = createContext();
+
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case 'increment':
+      return state + 1
+    case 'decrement':
+      return state - 1
+    case 'reset':
+      return initialState
+    default:
+      return state
+  }
+}
 
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <>
       <div className='App'>
@@ -41,7 +59,14 @@ function App() {
         </UserContext.Provider> */}
         {/* <UseReducerSimpleCounter /> */}
         {/* <UseReducerComplexCounter /> */}
-        <MultipleUseReducers />
+        <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
+          <div>
+            Count - {count}
+            <ComponentA />
+            <ComponentB />
+            <ComponentC />
+          </div>
+        </CountContext.Provider>
       </div>
     </>
   );
