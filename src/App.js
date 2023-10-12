@@ -18,6 +18,7 @@ import { ComponentC } from './components/useReducer-with-useContext/ComponentC';
 import { FetchUsingUseEffect } from './components/useReducer-with-fetching/FetchUsingUseEffect';
 import { FetchUsingUseReducer } from './components/useReducer-with-fetching/FetchUsingUseReducer';
 import { ParentComponent } from './components/useCallback/ParentComponent';
+import { UseMemoCounter } from './components/useMemo/UseMemoCounter';
 
 /**
  * The `.createContext()` helps in maintaining context(or values) at any level of
@@ -72,7 +73,8 @@ function App() {
         </CountContext.Provider> */}
         {/* <FetchUsingUseEffect /> */}
         {/* <FetchUsingUseReducer /> */}
-        <ParentComponent />
+        {/* <ParentComponent /> */}
+        <UseMemoCounter />
       </div>
     </>
   );
