@@ -19,6 +19,8 @@ import { FetchUsingUseEffect } from './components/useReducer-with-fetching/Fetch
 import { FetchUsingUseReducer } from './components/useReducer-with-fetching/FetchUsingUseReducer';
 import { ParentComponent } from './components/useCallback/ParentComponent';
 import { UseMemoCounter } from './components/useMemo/UseMemoCounter';
+import { FocusInput } from './components/useRef/FocusInput';
+import { HookTimer } from './components/useRef/HookTimer';
 
 /**
  * The `.createContext()` helps in maintaining context(or values) at any level of
@@ -74,7 +76,9 @@ function App() {
         {/* <FetchUsingUseEffect /> */}
         {/* <FetchUsingUseReducer /> */}
         {/* <ParentComponent /> */}
-        <UseMemoCounter />
+        {/* <UseMemoCounter /> */}
+        {/* <FocusInput /> */}
+        <HookTimer />
       </div>
     </>
   );
