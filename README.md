@@ -14,3 +14,6 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+```
+## React snippets
+* https://github.com/ults-io/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md

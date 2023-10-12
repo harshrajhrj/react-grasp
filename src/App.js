@@ -21,6 +21,8 @@ import { ParentComponent } from './components/useCallback/ParentComponent';
 import { UseMemoCounter } from './components/useMemo/UseMemoCounter';
 import { FocusInput } from './components/useRef/FocusInput';
 import { HookTimer } from './components/useRef/HookTimer';
+import { DocTitle } from './components/customHooks/DocTitle';
+import { DocTitleClone } from './components/customHooks/DocTitleClone';
 
 /**
  * The `.createContext()` helps in maintaining context(or values) at any level of
@@ -78,7 +80,9 @@ function App() {
         {/* <ParentComponent /> */}
         {/* <UseMemoCounter /> */}
         {/* <FocusInput /> */}
-        <HookTimer />
+        {/* <HookTimer /> */}
+        <DocTitle />
+        <DocTitleClone />
       </div>
     </>
   );
