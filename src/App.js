@@ -23,6 +23,8 @@ import { FocusInput } from './components/useRef/FocusInput';
 import { HookTimer } from './components/useRef/HookTimer';
 import { DocTitle } from './components/customHooks/DocTitle';
 import { DocTitleClone } from './components/customHooks/DocTitleClone';
+import { CounterOne } from './components/customHooks/CounterOne';
+import { CounterTwo } from './components/customHooks/CounterTwo';
 
 /**
  * The `.createContext()` helps in maintaining context(or values) at any level of
@@ -81,8 +83,10 @@ function App() {
         {/* <UseMemoCounter /> */}
         {/* <FocusInput /> */}
         {/* <HookTimer /> */}
-        <DocTitle />
-        <DocTitleClone />
+        {/* <DocTitle />
+        <DocTitleClone /> */}
+        <CounterOne />
+        <CounterTwo />
       </div>
     </>
   );
