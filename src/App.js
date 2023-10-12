@@ -17,6 +17,7 @@ import { ComponentB } from './components/useReducer-with-useContext/ComponentB';
 import { ComponentC } from './components/useReducer-with-useContext/ComponentC';
 import { FetchUsingUseEffect } from './components/useReducer-with-fetching/FetchUsingUseEffect';
 import { FetchUsingUseReducer } from './components/useReducer-with-fetching/FetchUsingUseReducer';
+import { ParentComponent } from './components/useCallback/ParentComponent';
 
 /**
  * The `.createContext()` helps in maintaining context(or values) at any level of
@@ -70,7 +71,8 @@ function App() {
           </div>
         </CountContext.Provider> */}
         {/* <FetchUsingUseEffect /> */}
-        <FetchUsingUseReducer />
+        {/* <FetchUsingUseReducer /> */}
+        <ParentComponent />
       </div>
     </>
   );
