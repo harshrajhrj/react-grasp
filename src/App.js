@@ -25,6 +25,7 @@ import { DocTitle } from './components/customHooks/DocTitle';
 import { DocTitleClone } from './components/customHooks/DocTitleClone';
 import { CounterOne } from './components/customHooks/CounterOne';
 import { CounterTwo } from './components/customHooks/CounterTwo';
+import { UserForm } from './components/customHooks/UserForm';
 
 /**
  * The `.createContext()` helps in maintaining context(or values) at any level of
@@ -85,8 +86,9 @@ function App() {
         {/* <HookTimer /> */}
         {/* <DocTitle />
         <DocTitleClone /> */}
-        <CounterOne />
-        <CounterTwo />
+        {/* <CounterOne />
+        <CounterTwo /> */}
+        <UserForm />
       </div>
     </>
   );
