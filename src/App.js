@@ -15,6 +15,8 @@ import { MultipleUseReducers } from './components/useReducer/MultipleUseReducers
 import { ComponentA } from './components/useReducer-with-useContext/ComponentA';
 import { ComponentB } from './components/useReducer-with-useContext/ComponentB';
 import { ComponentC } from './components/useReducer-with-useContext/ComponentC';
+import { FetchUsingUseEffect } from './components/useReducer-with-fetching/FetchUsingUseEffect';
+import { FetchUsingUseReducer } from './components/useReducer-with-fetching/FetchUsingUseReducer';
 
 /**
  * The `.createContext()` helps in maintaining context(or values) at any level of
@@ -59,14 +61,16 @@ function App() {
         </UserContext.Provider> */}
         {/* <UseReducerSimpleCounter /> */}
         {/* <UseReducerComplexCounter /> */}
-        <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
+        {/* <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
           <div>
             Count - {count}
             <ComponentA />
             <ComponentB />
             <ComponentC />
           </div>
-        </CountContext.Provider>
+        </CountContext.Provider> */}
+        {/* <FetchUsingUseEffect /> */}
+        <FetchUsingUseReducer />
       </div>
     </>
   );
